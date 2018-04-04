@@ -26,6 +26,7 @@ perMin = 0
 
 # DEFINE FUNCTIONS
 def update(event):
+
     # read values from the sliders/statics
     theamp = slide_amp.val # using "the" keeps main namespace clean
     theper = slide_per.val
@@ -46,6 +47,7 @@ def update(event):
 
 
 def reset(event):
+
     # reset button
     slide_amp.reset()
     slide_per.reset()
@@ -57,18 +59,17 @@ y = amp * np.sin( per * t )
 
 
 # setup the figure
-plt.rcParams['toolbar'] = 'None'
-plt.rcParams['figure.figsize'] = 11, 7
-fig, ax = plt.subplots()
-fig.canvas.set_window_title('SedEdu -- example module')
-plt.subplots_adjust(left=0.075, bottom=0.1, top=0.95, right=0.5)
-background_color = 'white'
-ax.set_xlabel("t")
-ax.set_ylabel("y")
-plt.ylim(min(t), max(t))
-plt.ylim(-ampMax*1.5, ampMax*1.5)
-ax.xaxis.set_major_locator(plt.MultipleLocator(base=pi))
-ax.xaxis.set_major_formatter( plt.FuncFormatter(lambda v, x: str(int(v/pi)) + '$\pi$') )
+plt.rcParams['toolbar'] = 'None' # turn off the matplotlib toolbar in the figure
+plt.rcParams['figure.figsize'] = 11, 7 # size of the figure in inches
+fig, ax = plt.subplots() # gives us a figure object and axes object to manipulate and plot things into
+fig.canvas.set_window_title('SedEdu -- example module') # title of the figure window
+plt.subplots_adjust(left=0.075, bottom=0.1, top=0.95, right=0.5) # where do we want the limits of the axes object
+ax.set_xlabel("t") # the axis xlabel
+ax.set_ylabel("y") # the axis ylabel
+plt.xlim(min(t), max(t)) # the axis x limits
+plt.ylim(-ampMax*1.25, ampMax*1.25) # the axis y limits
+ax.xaxis.set_major_locator(plt.MultipleLocator(base=pi)) # locate tick marks every pi
+ax.xaxis.set_major_formatter( plt.FuncFormatter(lambda v, x: str(int(v/pi)) + '$\pi$') ) # label them with X$\pi$
 
 
 # add plot elements

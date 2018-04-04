@@ -4,6 +4,7 @@
     "version": "1.0",
     "shortdesc": "A simple model implementation to demonstrate a module in SedEdu",
     "difficulty": 1,
+    "license": "MIT"
     "projurl": "https://github.com/amoodie/example-module_sededu.git",
     "projreadme": ["README.md"],
     "preview": ["private", "demo.jpeg"],
