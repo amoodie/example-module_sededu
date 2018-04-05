@@ -1,15 +1,22 @@
 # Example Module for SedEdu
 
-This module exists to give module developers a sense of what is possible, and a potential workflow for designing their modules. 
-This `README.md` is __not__ meant to be a template for a module readme; you can find a template README in the `template-module` INSERT LINK HERE!!
+This module exists to give module developers a slight sense of what is possible, and a potential workflow for designing their modules. 
+This `README.md` is __not__ a template for a module readme; you can find a template README in the `template-module` INSERT LINK HERE!!
 
 license
 
 <!-- In fact, the companion repository `template-module` is a great place to look for additional examples of a blank `about.json` and `README.md` file. -->
 
-## Folder organization
+## Folder and file organization
 
 
+### Required files
+Below enumerates the minimum required files for your module to be incorporated into SedEdu. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+
+* `README.md` -- here is a template
+* `LICENSE.txt` -- see [below](#licensing), and Module Licensing
+* `about.json` -- see [writing `about.json`](https://github.com/amoodie/sededu/blob/feat_documentation/docs/writing_aboutjson.md)
+* executable python script
 
 
 ## The Module
@@ -269,6 +276,10 @@ plt.show()
 
 
 
+## Activities and Worksheets
+
+
+
 ## Integrating into SedEdu
 To integrate this activity into SedEdu at this point is quite simple. 
 In summary, we need to 
@@ -282,7 +293,6 @@ In summary, we need to
 
 This process is _very_ easy, but requires a thorough explanation for those new to the `git` workflow.
 Therefore, there is an entire article describing [how to contribute a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
-
 
 
 ## Licensing
