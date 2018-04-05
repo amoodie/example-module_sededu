@@ -9,14 +9,31 @@ license
 
 ## Folder and file organization
 
+bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.min.css
+│   ├── bootstrap-theme.css
+│   └── bootstrap-theme.min.css
+├── js/
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── fonts/
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    └── glyphicons-halflings-regular.woff
 
 ### Required files
-Below enumerates the minimum required files for your module to be incorporated into SedEdu. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+Below the minimum required files for your module to be incorporated into SedEdu are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
 
 * `README.md` -- here is a template
 * `LICENSE.txt` -- see [below](#licensing), and Module Licensing
 * `about.json` -- see [writing `about.json`](https://github.com/amoodie/sededu/blob/feat_documentation/docs/writing_aboutjson.md)
 * executable python script
+
+The following section describes in detail the last listed required file: the executable python script `example-module.py`.
+
 
 
 ## The Module
