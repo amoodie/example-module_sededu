@@ -9,20 +9,52 @@ license
 
 ## Folder and file organization
 
-bootstrap/
-├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.min.css
-│   ├── bootstrap-theme.css
-│   └── bootstrap-theme.min.css
-├── js/
-│   ├── bootstrap.js
-│   └── bootstrap.min.js
-└── fonts/
-    ├── glyphicons-halflings-regular.eot
-    ├── glyphicons-halflings-regular.svg
-    ├── glyphicons-halflings-regular.ttf
-    └── glyphicons-halflings-regular.woff
+The folder structure of this example module is configured to work with SedEdu and includes GitHub repository folders and files.
+
+
+example-module/
+├── .git
+│   └── not-listed-here
+├── docs
+│   ├── theory.md
+│   └── worksheet.md
+├── private
+│   ├── base_slider.png
+│   ├── custom_slider.png
+│   ├── example-module_demo.png
+│   └── without_sliders.png
+├── src
+│   ├── example-module.py
+│   └── utils.py
+├── about.json
+├── .gitignore
+├── LICENSE.txt
+└── README.md
+
+```
+example-module/
+├── .git
+│   └── not-listed-here
+├── docs
+│   ├── theory.md
+│   └── worksheet.md
+├── private
+│   ├── base_slider.png
+│   ├── custom_slider.png
+│   ├── example-module_demo.png
+│   └── without_sliders.png
+├── src
+│   ├── example-module.py
+│   └── utils.py
+├── about.json
+├── .gitignore
+├── LICENSE.txt
+└── README.md
+```
+
+
+Note that the contents of `.git/` are not listed in the tree for brevity.
+
 
 ### Required files
 Below the minimum required files for your module to be incorporated into SedEdu are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
