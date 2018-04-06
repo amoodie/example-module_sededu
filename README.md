@@ -51,7 +51,9 @@ This is where the main executable `example-module.py` and a support module `util
 
 In the root repository then we have a `README.md` (the file you are reading!), a `LICENSE.txt`, a file called `about.json`, and a `.gitignore`.
 The `README` should provide an overview of using the module, and information about authors, supporting documents (publications?), funding sources, etc.
-The `LICENSE.txt` contains the modules licensing information, we recommend 
+The `LICENSE.txt` contains the modules licensing information, see [Module Licensing](https://github.com/amoodie/sededu/blob/feat_documentation/docs/contributing_module.md#module-licensing) for more information (we recommend the [MIT license](https://choosealicense.com/licenses/mit/)).
+The `about.json` file just contains some simple information which gets displayed/used within SedEdu; see [Contributing a Module](https://github.com/amoodie/sededu/blob/feat_documentation/docs/contributing_module.md) and [Writing about.json](https://github.com/amoodie/sededu/blob/feat_documentation/docs/writing_aboutjson.md) for more information about this file's contents.
+The `.gitignore` file is a GitHub related file that tells your local repository which files to sync with the remote GitHub repository (you don't need to worry about this right now)
 
 Below the _minimum required files for your module to be incorporated into SedEdu_ are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
 
@@ -324,9 +326,9 @@ plt.show()
 
 ## Activities and Worksheets
 
-Now that we have a working module, we need to write activites to complete alongside the module.
+Now that we have a working module, we need to write activities to complete alongside the module.
 For our simple module, it would be good to have a document describing some "theory" behind a sine function and an activity to explore the functionality our module offers.
-
+Some __incomplete example__ activities like this are [in the `docs` folder](https://github.com/amoodie/example-module_sededu/tree/master/docs).
 
 
 
@@ -343,6 +345,7 @@ In summary, we need to
 
 This process is _very_ easy, but requires a thorough explanation for those new to the `git` workflow.
 Therefore, there is an entire article describing [how to contribute a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+
 
 
 ## Licensing

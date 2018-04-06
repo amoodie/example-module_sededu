@@ -7,11 +7,11 @@
     "difficulty": 1,
     "projurl": "https://github.com/amoodie/example-module_sededu.git",
     "projreadme": ["README.md"],
-    "preview": ["private", "demo.jpeg"],
+    "preview": ["private", "example-module_demo.png"],
     "exec": ["src", "example-module.py"],
     "docloc": ["docs"],
     "doclist": {
     	"theory.md": "Theory behind the model framework", 
-    	"worksheet.md": "Worksheet (Grades 10-12)"
+    	"worksheet.md": "Worksheet"
     }
 }
