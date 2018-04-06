@@ -122,10 +122,10 @@ amp = ampInit
 ampMax = 5
 ampMin = 0
 
-perInit = 1
+perInit = 2 #2*pi
 per = perInit
-perMax = 3
-perMin = 0
+perMax = 10
+perMin = 0.1
 ```
 
 In this case, we set up the "x" coordinates of our plot as the period of the sine function `t`. 
@@ -148,7 +148,7 @@ def update(event):
     theper = slide_per.val
 
     # compute new y values
-    they = theamp * np.sin( theper * t )
+    they = theamp * np.sin( ((2*pi)/(theper*pi)) * t )
 
     # update the plot
     sin_line.set_ydata(they)
@@ -186,7 +186,7 @@ def reset(event):
 In our really simple model, this step consists of only one line of code, to calculate the y coordinates of the sine function with initial amplitude and period values:
 
 ```
-y = amp * np.sin( per * t )
+y = amp * np.sin( ((2*pi)/(per*pi)) * t )
 ```
 
 Now, in our model it is not really necessary to do this after the function declarations, we could do it up with our parameters declarations (e.g., right after `t`, `amp`, and `per` have each been declared.
@@ -210,17 +210,18 @@ Our main figure in this module will display the sine function we are evaluating 
 Commented code describing the setup of this figure is below:
 
 ```
-plt.rcParams['toolbar'] = 'None' # turn off the matplotlib toolbar in the figure
-plt.rcParams['figure.figsize'] = 11, 7 # size of the figure in inches
-fig, ax = plt.subplots() # gives us a figure object and axes object to manipulate and plot things into
-fig.canvas.set_window_title('SedEdu -- example module') # title of the figure window
-plt.subplots_adjust(left=0.075, bottom=0.1, top=0.95, right=0.5) # where do we want the limits of the axes object
-ax.set_xlabel("t") # the axis xlabel
-ax.set_ylabel("y") # the axis ylabel
-plt.xlim(min(t), max(t)) # the axis x limits
-plt.ylim(-ampMax*1.25, ampMax*1.25) # the axis y limits
-ax.xaxis.set_major_locator(plt.MultipleLocator(base=pi)) # locate tick marks every pi
-ax.xaxis.set_major_formatter( plt.FuncFormatter(lambda v, x: str(int(v/pi)) + '$\pi$') ) # label them with X$\pi$ 
+plt.rcParams['toolbar'] = 'None'                                    # turn off the matplotlib toolbar in the figure
+plt.rcParams['figure.figsize'] = 11, 7                              # size of the figure in inches
+fig, ax = plt.subplots()                                            # gives us a figure object and axes object to manipulate and plot things into
+fig.canvas.set_window_title('SedEdu -- example module')             # title of the figure window
+plt.subplots_adjust(left=0.075, bottom=0.1, top=0.95, right=0.5)    # where do we want the limits of the axes object
+ax.set_xlabel("t")                                                  # the axis xlabel
+ax.set_ylabel("y")                                                  # the axis ylabel
+plt.xlim(min(t), max(t))                                            # the axis x limits
+plt.ylim(-ampMax*1.25, ampMax*1.25)                                 # the axis y limits
+ax.xaxis.set_major_locator(plt.MultipleLocator(base=pi))            # locate tick marks every pi
+ax.xaxis.set_major_formatter( plt.FuncFormatter( \ 
+                        lambda v, x: str(int(v/pi)) + '$\pi$') )    # label them with X$\pi$ 
 ```
 
 The figure and axes syntax is reasonably simple if you have used Matlab before (the namesake of `matplotlib`), and you can find _extensive_ documentation for `matplotlib.pyplot` on the [official site](https://matplotlib.org/api/pyplot_summary.html).
@@ -263,7 +264,7 @@ slide_amp = utils.MinMaxSlider(ax_amp, 'amplitude', ampMin, ampMax,
 
 ax_per = plt.axes([0.55, 0.725, 0.4, 0.05], facecolor=widget_color)
 slide_per = utils.MinMaxSlider(ax_per, 'period', perMin, perMax, 
-    valinit=perInit, valstep=0.01, valfmt='%g', transform=ax.transAxes)
+    valinit=perInit, valstep=0.1, valfmt='%g'+'$\pi$', transform=ax.transAxes)
 ```
 
 __NOTE:__ in this example, we use a custom slider widget from `utils` called `MinMaxSlider`.

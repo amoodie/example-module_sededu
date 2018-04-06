@@ -89,7 +89,6 @@ ax_per = plt.axes([0.55, 0.725, 0.4, 0.05], facecolor=widget_color)
 slide_per = utils.MinMaxSlider(ax_per, 'period', perMin, perMax, 
     valinit=perInit, valstep=0.1, valfmt='%g'+'$\pi$', transform=ax.transAxes)
 
-
 btn_reset_ax = plt.axes([0.825, 0.5, 0.1, 0.04])
 btn_reset = widget.Button(btn_reset_ax, 'Reset', color=widget_color, hovercolor='0.975')
 

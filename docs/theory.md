@@ -12,4 +12,4 @@ __NOTE:__ this text comes directly from Wikipedia. It is not owned by SedEdu or 
 
 ## Mathematical description
 
-   $y = A sin( (2\pi / \omega) t)$
+   _y_ = _A_ sin( (2&pi / &omega) _t_)
