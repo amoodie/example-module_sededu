@@ -1,7 +1,7 @@
 # Exploring the Sine function
 
 ## Period 
-When you first open the module, the sliders at set to amplitude $A = 1$ and period $\omega = 2\pi$. Looking at the graph from $x = 0\pi$ to $x=6\pi$, where does it appear the sine function crosses the x-axis?
+When you first open the module, the sliders at set to amplitude $A = 1$ and period $\omega = 2\pi$. Looking at the graph from $x = 0\pi$ to $x = 6\pi$, where does it appear the sine function crosses the x-axis?
 
 ```
 
