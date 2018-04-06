@@ -1,35 +1,18 @@
 # Example Module for SedEdu
 
-This module exists to give module developers a slight sense of what is possible, and a potential workflow for designing their modules. 
-This `README.md` is __not__ a template for a module readme; you can find a template README in the `template-module` INSERT LINK HERE!!
+The goal of this module is to give module developers a potential workflow for designing their modules and a sense of what is possible. 
+This `README.md` is __not__ a template for a module README; you can find a [template README](https://github.com/amoodie/template-module_sededu/blob/master/README.md) in the `template-module`.
+In fact, the companion repository `template-module` is a great place to look for additional examples of a blank `about.json` and empty folder structure.
 
-license
 
-<!-- In fact, the companion repository `template-module` is a great place to look for additional examples of a blank `about.json` and `README.md` file. -->
 
 ## Folder and file organization
 
-The folder structure of this example module is configured to work with SedEdu and includes GitHub repository folders and files.
+This section discusses a potential folder structure for your module.
+It describes some of the logic behind this structure, but it by no means required to follow this setup.
 
-
-example-module/
-├── .git
-│   └── not-listed-here
-├── docs
-│   ├── theory.md
-│   └── worksheet.md
-├── private
-│   ├── base_slider.png
-│   ├── custom_slider.png
-│   ├── example-module_demo.png
-│   └── without_sliders.png
-├── src
-│   ├── example-module.py
-│   └── utils.py
-├── about.json
-├── .gitignore
-├── LICENSE.txt
-└── README.md
+The folder structure of this example module is to separate the logical portions of the module, and is configured to work with SedEdu and includes GitHub repository folders and files. 
+Note that the contents of `.git` are not listed in the tree for brevity.
 
 ```
 example-module/
@@ -52,15 +35,28 @@ example-module/
 └── README.md
 ```
 
+The module root is the `example-module` folder, and this root contains 4 folders and 4 files. 
+The first folder is the `.git` folder, which manages the `git` history of the repository -- we won't go over that technology or its importance here, you can ignore it for this tutorial.
 
-Note that the contents of `.git/` are not listed in the tree for brevity.
+The second folder is `docs` and it contains 2 files. 
+This folder would be where we would put all the activities related to the module (worksheets, explanations, answer keys, etc.).
 
+Third, there is a folder called `private` which is used to store files and folders that should not be interacted with directly by the user.
+In this example module, the images used in the README are stored in this folder.
+If you had static images that were used in your module you could put them here.
+You could also put data here (in a subfolder called `data`).
 
-### Required files
-Below the minimum required files for your module to be incorporated into SedEdu are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+Finally we have the `src` folder, which contains our module's codebase. 
+This is where the main executable `example-module.py` and a support module `utils.py` live.
+
+In the root repository then we have a `README.md` (the file you are reading!), a `LICENSE.txt`, a file called `about.json`, and a `.gitignore`.
+The `README` should provide an overview of using the module, and information about authors, supporting documents (publications?), funding sources, etc.
+The `LICENSE.txt` contains the modules licensing information, we recommend 
+
+Below the _minimum required files for your module to be incorporated into SedEdu_ are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
 
 * `README.md` -- here is a template
-* `LICENSE.txt` -- see [below](#licensing), and Module Licensing
+* `LICENSE.txt` -- see [below](#licensing), and [Module Licensing](https://github.com/amoodie/sededu/blob/feat_documentation/docs/contributing_module.md#module-licensing)
 * `about.json` -- see [writing `about.json`](https://github.com/amoodie/sededu/blob/feat_documentation/docs/writing_aboutjson.md)
 * executable python script
 
@@ -326,6 +322,10 @@ plt.show()
 
 
 ## Activities and Worksheets
+
+Now that we have a working module, we need to write activites to complete alongside the module.
+For our simple module, it would be good to have a document describing some "theory" behind a sine function and an activity to explore the functionality our module offers.
+
 
 
 

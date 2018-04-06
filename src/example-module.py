@@ -18,10 +18,10 @@ amp = ampInit
 ampMax = 5
 ampMin = 0
 
-perInit = 1
+perInit = 2 #2*pi
 per = perInit
-perMax = 3
-perMin = 0
+perMax = 10
+perMin = 0.1
 
 
 # DEFINE FUNCTIONS
@@ -32,7 +32,7 @@ def update(event):
     theper = slide_per.val
 
     # compute new y values
-    they = theamp * np.sin( theper * t )
+    they = theamp * np.sin( ((2*pi)/(theper*pi)) * t )
 
     # update the plot
     sin_line.set_ydata(they)
@@ -55,7 +55,7 @@ def reset(event):
 
 
 # run the model once with the initial values
-y = amp * np.sin( per * t )
+y = amp * np.sin( ((2*pi)/(per*pi)) * t )
 
 
 # setup the figure
@@ -87,7 +87,7 @@ slide_amp = utils.MinMaxSlider(ax_amp, 'amplitude', ampMin, ampMax,
 
 ax_per = plt.axes([0.55, 0.725, 0.4, 0.05], facecolor=widget_color)
 slide_per = utils.MinMaxSlider(ax_per, 'period', perMin, perMax, 
-    valinit=perInit, valstep=0.01, valfmt='%g', transform=ax.transAxes)
+    valinit=perInit, valstep=0.1, valfmt='%g'+'$\pi$', transform=ax.transAxes)
 
 
 btn_reset_ax = plt.axes([0.825, 0.5, 0.1, 0.04])
