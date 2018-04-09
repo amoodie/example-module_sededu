@@ -51,15 +51,15 @@ This is where the main executable `example-module.py` and a support module `util
 
 In the root repository then we have a `README.md` (the file you are reading!), a `LICENSE.txt`, a file called `about.json`, and a `.gitignore`.
 The `README` should provide an overview of using the module, and information about authors, supporting documents (publications?), funding sources, etc.
-The `LICENSE.txt` contains the modules licensing information, see [Module Licensing](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md#module-licensing) for more information (we recommend the [MIT license](https://choosealicense.com/licenses/mit/)).
-The `about.json` file just contains some simple information which gets displayed/used within SedEdu; see [Contributing a Module](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md) and [Writing about.json](https://github.com/amoodie/sededu/blob/develop/docs/writing_aboutjson.md) for more information about this file's contents.
+The `LICENSE.txt` contains the modules licensing information, see [Module Licensing](https://github.com/amoodie/sededu/blob/release/docs/contributing_module.md#module-licensing) for more information (we recommend the [MIT license](https://choosealicense.com/licenses/mit/)).
+The `about.json` file just contains some simple information which gets displayed/used within SedEdu; see [Contributing a Module](https://github.com/amoodie/sededu/blob/release/docs/contributing_module.md) and [Writing about.json](https://github.com/amoodie/sededu/blob/release/docs/writing_aboutjson.md) for more information about this file's contents.
 The `.gitignore` file is a GitHub related file that tells your local repository which files to sync with the remote GitHub repository (you don't need to worry about this right now)
 
-Below the _minimum required files for your module to be incorporated into SedEdu_ are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+Below the _minimum required files for your module to be incorporated into SedEdu_ are listed. A separate article exists with complete information on [contributing a module to SedEdu](https://github.com/amoodie/sededu/blob/release/docs/contributing_module.md).
 
 * `README.md` -- here is a template
-* `LICENSE.txt` -- see [below](#licensing), and [Module Licensing](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md#module-licensing)
-* `about.json` -- see [writing `about.json`](https://github.com/amoodie/sededu/blob/develop/docs/writing_aboutjson.md)
+* `LICENSE.txt` -- see [below](#licensing), and [Module Licensing](https://github.com/amoodie/sededu/blob/release/docs/contributing_module.md#module-licensing)
+* `about.json` -- see [writing `about.json`](https://github.com/amoodie/sededu/blob/release/docs/writing_aboutjson.md)
 * executable python script
 
 The following section describes in detail the last listed required file: the executable python script `example-module.py`.
@@ -344,7 +344,7 @@ In summary, we need to
 * pull request to SedEdu
 
 This process is _very_ easy, but requires a thorough explanation for those new to the `git` workflow.
-Therefore, there is an entire article describing [how to contribute a module to SedEdu](https://github.com/amoodie/sededu/blob/develop/docs/contributing_module.md).
+Therefore, there is an entire article describing [how to contribute a module to SedEdu](https://github.com/amoodie/sededu/blob/release/docs/contributing_module.md).
 
 
 
